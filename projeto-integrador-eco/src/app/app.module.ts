@@ -10,6 +10,7 @@ import { BodyComponent } from './components/static/body/body.component';
 import { SobreNosComponent } from './components/dynamic/sobre-nos/sobre-nos.component';
 import { NavbarComponent } from './components/static/header/navbar/navbar.component';
 import { HomeComponent } from './components/dynamic/home/home.component';
+import { ContatoComponent } from './components/dynamic/contato/contato.component';
 
 
 
@@ -20,7 +21,7 @@ import { HomeComponent } from './components/dynamic/home/home.component';
     HeaderComponent,
     FooterComponent,
     BodyComponent,
-   
+    ContatoComponent,
     SobreNosComponent,
     NavbarComponent,
     HomeComponent
