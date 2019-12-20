@@ -13,8 +13,9 @@ import { HomeComponent } from './components/dynamic/home/home.component';
 import { ContatoComponent } from './components/dynamic/contato/contato.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
-import { ProductsListComponent } from './products-list/products-list.component';
-import { ProductsIdComponent } from './products-id/products-id.component';
+import { ProductsListComponent } from './components/dynamic/products-list/products-list.component';
+import { ProductsIdComponent } from './components/dynamic/products-id/products-id.component';
+import { ProdutoComponent } from './components/produto/produto.component';
 
 
 @NgModule({
@@ -28,7 +29,8 @@ import { ProductsIdComponent } from './products-id/products-id.component';
     NavbarComponent,
     HomeComponent,
     ProductsListComponent,
-    ProductsIdComponent
+    ProductsIdComponent,
+    ProdutoComponent
     
 
   ],

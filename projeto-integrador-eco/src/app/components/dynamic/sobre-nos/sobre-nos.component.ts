@@ -12,4 +12,11 @@ export class SobreNosComponent implements OnInit {
   ngOnInit() {
   }
 
+  over0: boolean = false;
+  over1: boolean = false;
+  over2: boolean = false;
+  over3: boolean = false;
+  over4: boolean = false;
+
+
 }
