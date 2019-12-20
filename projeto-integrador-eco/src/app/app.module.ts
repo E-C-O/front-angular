@@ -6,9 +6,13 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/static/header/header.component';
 import { FooterComponent } from './components/static/footer/footer.component';
 import { BodyComponent } from './components/static/body/body.component';
-import { ContatoComponent } from './components/dynamic/contato/contato.component';
-import { HomeComponent } from './components/dynamic/home/home.component';
+
 import { SobreNosComponent } from './components/dynamic/sobre-nos/sobre-nos.component';
+import { NavbarComponent } from './components/static/header/navbar/navbar.component';
+import { HomeComponent } from './components/dynamic/home/home.component';
+import { ContatoComponent } from './components/dynamic/contato/contato.component';
+
+
 
 
 @NgModule({
@@ -19,7 +23,10 @@ import { SobreNosComponent } from './components/dynamic/sobre-nos/sobre-nos.comp
     BodyComponent,
     ContatoComponent,
     SobreNosComponent,
+    NavbarComponent,
     HomeComponent
+
+    
 
   ],
   imports: [
