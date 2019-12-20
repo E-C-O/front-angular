@@ -1,3 +1,6 @@
+
+import { ProductsListComponent } from './components/dynamic/products-list/products-list.component';
+import { ProductsIdComponent } from './components/dynamic/products-id/products-id.component';
 import { HomeComponent } from './components/dynamic/home/home.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
@@ -6,6 +9,8 @@ import { SobreNosComponent } from './components/dynamic/sobre-nos/sobre-nos.comp
 
 
 const routes: Routes = [
+  {path: 'products-id', component: ProductsIdComponent },
+  {path: 'products-list', component: ProductsListComponent },
   { path: 'home', component: HomeComponent },
   { path: 'contato', component: ContatoComponent },
   { path: 'about', component: SobreNosComponent }
@@ -16,3 +21,6 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
+
+
+
