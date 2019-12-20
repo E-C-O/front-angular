@@ -1,0 +1,27 @@
+/* .space{
+    margin: 150px;
+}
+.align-center{
+    text-align: center;
+} */
+.img-resize{
+    width: 211px;
+    height: 211px;
+}
+.align-center{    
+    text-align: center;
+}
+.space{
+    height: 150px;
+}
+.nav-tam{
+    width: 100% !important;
+}
+.font-color{
+    color: #adeee3
+}
+
+#div-border{
+    border-style: solid;
+    border-color: bisque;
+}

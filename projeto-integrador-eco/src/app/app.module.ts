@@ -6,15 +6,15 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/static/header/header.component';
 import { FooterComponent } from './components/static/footer/footer.component';
 import { BodyComponent } from './components/static/body/body.component';
+import { FormsModule } from '@angular/forms';
 
 import { SobreNosComponent } from './components/dynamic/sobre-nos/sobre-nos.component';
 import { NavbarComponent } from './components/static/header/navbar/navbar.component';
 import { HomeComponent } from './components/dynamic/home/home.component';
 import { ContatoComponent } from './components/dynamic/contato/contato.component';
 import { HttpClientModule } from '@angular/common/http';
-import { FormsModule } from '@angular/forms';
-import { ProductsListComponent } from './products-list/products-list.component';
-import { ProductsIdComponent } from './products-id/products-id.component';
+import { ProductsListComponent } from './components/dynamic/products-list/products-list.component';
+import { ProductsIdComponent } from './components/dynamic/products-id/products-id.component';
 
 
 @NgModule({
