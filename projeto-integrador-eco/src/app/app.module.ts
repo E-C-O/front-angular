@@ -6,14 +6,12 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/static/header/header.component';
 import { FooterComponent } from './components/static/footer/footer.component';
 import { BodyComponent } from './components/static/body/body.component';
+import { FormsModule } from '@angular/forms';
 
 import { SobreNosComponent } from './components/dynamic/sobre-nos/sobre-nos.component';
 import { NavbarComponent } from './components/static/header/navbar/navbar.component';
 import { HomeComponent } from './components/dynamic/home/home.component';
 import { ContatoComponent } from './components/dynamic/contato/contato.component';
-
-
-
 
 @NgModule({
   declarations: [
@@ -26,12 +24,12 @@ import { ContatoComponent } from './components/dynamic/contato/contato.component
     NavbarComponent,
     HomeComponent
 
-    
 
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
