@@ -6,16 +6,10 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/static/header/header.component';
 import { FooterComponent } from './components/static/footer/footer.component';
 import { BodyComponent } from './components/static/body/body.component';
-<<<<<<< HEAD
 import { ContatoComponent } from './components/dynamic/contato/contato.component';
 import { HomeComponent } from './components/dynamic/home/home.component';
-=======
-<<<<<<< HEAD
 import { SobreNosComponent } from './components/dynamic/sobre-nos/sobre-nos.component';
-=======
-import { HomeComponent } from './components/dinamic/home/home.component';
->>>>>>> f5591744764b5e60bb95178be3e4762d918e4f75
->>>>>>> b6d71c760ac7cfcb18e25d77e049ba1ee9fee4f8
+
 
 @NgModule({
   declarations: [
@@ -23,15 +17,10 @@ import { HomeComponent } from './components/dinamic/home/home.component';
     HeaderComponent,
     FooterComponent,
     BodyComponent,
-<<<<<<< HEAD
     ContatoComponent,
-=======
-<<<<<<< HEAD
-    SobreNosComponent
-=======
->>>>>>> b6d71c760ac7cfcb18e25d77e049ba1ee9fee4f8
+    SobreNosComponent,
     HomeComponent
->>>>>>> f5591744764b5e60bb95178be3e4762d918e4f75
+
   ],
   imports: [
     BrowserModule,
