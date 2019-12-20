@@ -1,0 +1,22 @@
+<table border="1px">
+
+    <th>Id Produto</th>
+    <th>Titulo</th>
+    <th>Detalhes</th>
+    <th>Link Foto</th>
+    <th>Preço</th>
+    <th>Qtd Estoque</th>
+    
+    <tr *ngFor= "let item of products">
+     <td>{{item.idProduto}}</td>
+     <td>{{item.titulo}}</td>
+     <td>{{item.detalhes}}</td>
+     <td>{{item.linkfoto}}</td>
+     <td>{{item.preco}}</td>
+     <td>{{item.qtdEstoque}}</td>   
+    </tr>
+</table>
+<br>
+<h1>Quantidade de produtos: {{products.length}}</h1>
+
+

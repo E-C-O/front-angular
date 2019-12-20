@@ -11,8 +11,10 @@ import { SobreNosComponent } from './components/dynamic/sobre-nos/sobre-nos.comp
 import { NavbarComponent } from './components/static/header/navbar/navbar.component';
 import { HomeComponent } from './components/dynamic/home/home.component';
 import { ContatoComponent } from './components/dynamic/contato/contato.component';
-
-
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
+import { ProductsListComponent } from './products-list/products-list.component';
+import { ProductsIdComponent } from './products-id/products-id.component';
 
 
 @NgModule({
@@ -24,14 +26,17 @@ import { ContatoComponent } from './components/dynamic/contato/contato.component
     ContatoComponent,
     SobreNosComponent,
     NavbarComponent,
-    HomeComponent
-
+    HomeComponent,
+    ProductsListComponent,
+    ProductsIdComponent
     
 
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
