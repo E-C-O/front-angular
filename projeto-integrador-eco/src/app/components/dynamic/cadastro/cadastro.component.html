@@ -1,36 +1,121 @@
-<form>
-    <div class="form-row">
-      <div class="col-md-6 mb-3">
-        <label for="validationDefault01">Nome</label>
-        <input type="text" class="form-control" id="validationDefault01" value=" " required>
-      </div>
-      <div class="col-md-6 mb-3">
-        <label for="validationDefault02">Sobrenome</label>
-        <input type="text" class="form-control" id="validationDefault02" value=" " required>
-      </div>
-      
-    </div>
-    <div class="form-row">
-      <div class="col-md-12 mb-3">
-        <label for="validationDefault03">Email</label>
-        <input type="text" class="form-control" id="validationDefault03" required>
-      </div>
-     
-      <div class="col-md-12 mb-3">
-        <label for="validationDefault05">Telefone</label>
-        <input type="text" class="form-control" id="validationDefault05" required>
-      </div>
+<div class="container col-12">
+    <div class="row">
+        <div class="col-2"></div>
+        <div class="col-8">
+            <div class="margin">
+                <h3 style="text-align:center">Cadastre-se</h3>
+                <div class="card">
+                    <div class="card-body">
 
-      <div class="col-md-12 mb-3">
-        <label for="validationDefault05">Senha</label>
-        <input type="text" class="form-control" id="validationDefault05" required>
-      </div>
 
-      <div class="col-md-12 mb-3">
-        <label for="validationDefault05">Confirmar senha</label>
-        <input type="text" class="form-control" id="validationDefault05" required>
-      </div>
+
+
+                        <form style="text-align:center" [formGroup]="angForm" novalidate>
+                            <div class="form-row">
+                                <div class="col-md-12">
+                                    <label for="validationDefault01">Nome</label>
+                                    <input type="text" class="form-control" formControlName="name"
+                                        id="validationDefault01" value=" " required>
+                                </div>
+
+                                <div class="col-6"
+                                    *ngIf="angForm.controls['name'].invalid && (angForm.controls['name'].dirty || angForm.controls['name'].touched)"
+                                    class="alert alert-danger">
+                                    <div *ngIf="angForm.controls['name'].errors.required">
+                                        Nome completo requerido
+                                    </div>
+                                </div>
+
+                            </div>
+
+
+
+
+
+
+                            <div class="form-row">
+                                <div class="col-md-12 mb-3">
+                                    <label for="validationDefault03">Email</label>
+                                    <input formControlName="address" type="email" class="form-control"
+                                        id="validationDefault03" pattern="" required>
+                                </div>
+
+                                <div class="col-6"
+                                    *ngIf="angForm.controls['address'].invalid && (angForm.controls['address'].dirty || angForm.controls['address'].touched)"
+                                    class="alert alert-danger">
+                                    email inválido.
+                                    <div *ngIf="angForm.controls['address'].errors.required">
+                                        email requerido.
+                                    </div>
+                                </div>
+
+
+
+
+
+
+
+                                <div class="col-md-12 mb-3">
+                                    <label for="validationDefault05">Telefone</label>
+                                    <input formControlName="tel" type="text" class="form-control"
+                                        id="validationDefault05" pattern="([11-99]{2})([9]?[0-9]{8})" required>
+                                </div>
+                                <div class="col-6"
+                                    *ngIf="angForm.controls['tel'].invalid && (angForm.controls['tel'].dirty || angForm.controls['tel'].touched)"
+                                    class="alert alert-danger">
+                                    telefone inválido.
+                                    <div *ngIf="angForm.controls['tel'].errors.required">
+                                        telefone requerido.
+                                    </div>
+                                </div>
+
+
+
+
+
+
+                                <div class="col-md-12 mb-3">
+                                    <label for="validationDefault05">Senha</label>
+                                    <input type="password" class="form-control" id="validationDefault05"
+                                        formControlName="senha" pattern="((?=.*[@,#,$,%,&]).{10,64})"
+                                        [(ngModel)]="senha1" required>
+                                </div>
+
+
+
+                                <div class="col-md-12 mb-3">
+                                    <label for="validationDefault05">Confirmar senha</label>
+                                    <input type="password" class="form-control" id="validationDefault05"
+                                        [(ngModel)]="senha2" required>
+                                </div>
+                                <div>
+
+                                </div>
+                                <div class="col-6"
+                                    *ngIf="angForm.controls['senha'].invalid && (angForm.controls['senha'].dirty || angForm.controls['senha'].touched)"
+                                    class="alert alert-danger">
+                                    senha fraca.
+                                    <div *ngIf="angForm.controls['senha'].errors.required">
+                                        senha requerida.
+                                    </div>
+                                </div>
+                                
+                                <div id="senhaNãoConferem" style="visibility: hidden" class="alert alert-danger">
+                                    senhas não conferem.
+                                </div>
+                            </div>
+                            
+                            <button class="btn btn-primary" (click)="compara()" type="input">Enviar</button>
+                        </form>
+
+
+
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-2"></div>
     </div>
-    
-    <button class="btn btn-primary" type="submit">Enviar</button>
-  </form>
+</div>
