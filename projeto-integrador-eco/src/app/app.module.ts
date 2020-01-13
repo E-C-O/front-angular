@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/static/header/header.component';
 import { FooterComponent } from './components/static/footer/footer.component';
 import { BodyComponent } from './components/static/body/body.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 import { SobreNosComponent } from './components/dynamic/sobre-nos/sobre-nos.component';
 import { NavbarComponent } from './components/static/header/navbar/navbar.component';
@@ -16,6 +17,7 @@ import { FormsModule } from '@angular/forms';
 import { ProductsListComponent } from './components/dynamic/products-list/products-list.component';
 import { ProductsIdComponent } from './components/dynamic/products-id/products-id.component';
 import { ProdutoComponent } from './components/produto/produto.component';
+import { CadastroComponent } from './components/dynamic/cadastro/cadastro.component';
 
 
 @NgModule({
@@ -30,12 +32,13 @@ import { ProdutoComponent } from './components/produto/produto.component';
     HomeComponent,
     ProductsListComponent,
     ProductsIdComponent,
-    ProdutoComponent
+    ProdutoComponent,
+    CadastroComponent
     
 
   ],
   imports: [
-    BrowserModule,
+    BrowserModule, ReactiveFormsModule,
     AppRoutingModule,
     HttpClientModule,
     FormsModule

@@ -6,11 +6,13 @@
 <div class="space"></div>
 <nav class="navbar  sticky-top navbar-expand-lg nav-color">
 
-    <a class="navbar-brand font-color" [routerLink]="['/home']" >((ECO))</a>
+    <a class="navbar-brand font-color" [routerLink]="['/home']" href="logo"><img src="assets/ECO2.png" id="logo" width="60" height="60" class="img" alt="Logo ECO"></a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
         aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Alterna navegação">
         <span class="navbar-toggler-icon"></span>
     </button>
+   
+
     <div class="collapse navbar-collapse" id="navbarNavDropdown">
         <ul class="navbar-nav">
             <li class="nav-item active">
@@ -28,20 +30,21 @@
                 </div>
             </li> -->
             <li class="nav-item">
-                <a class="nav-link font-color" [routerLink]="'/contato'">Contato</a>
-            </li>
-            <li class="nav-item">
                 <a class="nav-link font-color" [routerLink]="'/produtos'">Produtos</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link font-color" [routerLink]="'/about'">Sobre nós</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link font-color" href="#">Cadastro</a>
+                <a class="nav-link font-color" [routerLink]="'/contato'">Contato</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link font-color" [routerLink]="'/cadastro'">Cadastro</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link font-color" href="#">Login</a>
             </li>
         </ul>
+        
     </div>
 </nav>
