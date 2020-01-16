@@ -8,6 +8,7 @@ import { ContatoComponent } from './components/dynamic/contato/contato.component
 import { SobreNosComponent } from './components/dynamic/sobre-nos/sobre-nos.component';
 import { ProdutoComponent } from './components/produto/produto.component';
 import { CadastroListarComponent } from './components/dynamic/cadastro-listar/cadastro-listar.component';
+import { LoginComponent } from './components/dynamic/login/login.component';
 
 
 const routes: Routes = [
@@ -18,7 +19,8 @@ const routes: Routes = [
   { path: 'about', component: SobreNosComponent },
   { path: 'produtos', component: ProdutoComponent },
   { path: 'cadastro', component: CadastroComponent},
-  { path: 'cadastro-listar', component: CadastroListarComponent}
+  { path: 'cadastro-listar', component: CadastroListarComponent},
+  { path: 'login', component: LoginComponent}
 ];
 
 @NgModule({

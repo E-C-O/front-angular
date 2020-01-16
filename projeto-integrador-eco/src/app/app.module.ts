@@ -1,3 +1,4 @@
+import { LoginService } from './service/login/login.service';
 import { CadastroService } from './service/cadastro/cadastro.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
@@ -20,6 +21,7 @@ import { ProductsIdComponent } from './components/dynamic/products-id/products-i
 import { ProdutoComponent } from './components/produto/produto.component';
 import { CadastroComponent } from './components/dynamic/cadastro/cadastro.component';
 import { CadastroListarComponent } from './components/dynamic/cadastro-listar/cadastro-listar.component';
+import { LoginComponent } from './components/dynamic/login/login.component';
 
 
 @NgModule({
@@ -36,8 +38,9 @@ import { CadastroListarComponent } from './components/dynamic/cadastro-listar/ca
     ProductsIdComponent,
     ProdutoComponent,
     CadastroComponent,
-    CadastroListarComponent
-    
+    CadastroListarComponent,
+    LoginComponent
+
 
   ],
   imports: [
@@ -46,7 +49,8 @@ import { CadastroListarComponent } from './components/dynamic/cadastro-listar/ca
     HttpClientModule,
     FormsModule
   ],
-  providers: [CadastroService],
+  providers: [CadastroService,
+    LoginService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
