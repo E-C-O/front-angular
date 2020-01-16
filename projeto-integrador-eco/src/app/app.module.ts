@@ -1,3 +1,4 @@
+import { CadastroService } from './service/cadastro/cadastro.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
@@ -18,6 +19,7 @@ import { ProductsListComponent } from './components/dynamic/products-list/produc
 import { ProductsIdComponent } from './components/dynamic/products-id/products-id.component';
 import { ProdutoComponent } from './components/produto/produto.component';
 import { CadastroComponent } from './components/dynamic/cadastro/cadastro.component';
+import { CadastroListarComponent } from './components/dynamic/cadastro-listar/cadastro-listar.component';
 
 
 @NgModule({
@@ -33,7 +35,8 @@ import { CadastroComponent } from './components/dynamic/cadastro/cadastro.compon
     ProductsListComponent,
     ProductsIdComponent,
     ProdutoComponent,
-    CadastroComponent
+    CadastroComponent,
+    CadastroListarComponent
     
 
   ],
@@ -43,7 +46,7 @@ import { CadastroComponent } from './components/dynamic/cadastro/cadastro.compon
     HttpClientModule,
     FormsModule
   ],
-  providers: [],
+  providers: [CadastroService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,5 +1,6 @@
+import { Cadastro } from 'src/app/model/cadastro';
+import { CadastroService } from 'src/app/service/cadastro/cadastro.service';
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-cadastro',
@@ -11,36 +12,58 @@ export class CadastroComponent implements OnInit {
   ngOnInit() {
   }
 
-  title = 'Angular Form Validation';
-  angForm: FormGroup;
-  constructor(private fb: FormBuilder) {
-    this.createForm();
+  cadastro: Cadastro = new Cadastro(0, '', '', '', '');
+
+
+  senhaNaoConferem: boolean = true;
+  emailInvalido: boolean = true;
+  nomeInvalido: boolean = true;
+  usuarios = [];
+
+
+
+  senha2: string;
+
+
+
+  constructor(private cadastroService: CadastroService) {
   }
-  createForm() {
-    this.angForm = this.fb.group({
-      name: ['', Validators.required],
-      tel: ['', Validators.required],
-      senha: ['', Validators.required],
-      address: ['', Validators.required]
+
+
+
+
+  atualizar() {
+    this.cadastroService.getAll().subscribe((usuarios: Cadastro[]) => {
+      this.usuarios = usuarios;
+    }, err => {
+      console.log(`Erro cod: ${err.status}`);
+    });
+
+    this.usuarios.forEach(usuario => {
+      if (usuario.email == this.cadastro.email)
+        this.emailInvalido = true;
+      this.cadastro.idUsuario = usuario.idUsuario;
+    });
+
+    this.cadastroService.update(this.cadastro).subscribe((usuarios: Cadastro[]) => {
+      this.usuarios = usuarios;
+    }, err => {
+      console.log(`Erro cod: ${err.status}`);
     });
   }
 
 
 
 
-  senha1 : string;
-  senha2 : string;
 
-  compara() {
-    if(this.senha1 != this.senha2){
-      document.getElementById("senhaNãoConferem").style.visibility = "visible";
-    }
-    else{
-      document.getElementById("senhaNãoConferem").style.display = "none";
-    }
+  cadastrar() {
+    this.cadastroService.insert(this.cadastro).subscribe((cadastro: Cadastro) => {
+      this.cadastro = cadastro;
+    }, err => {
+      console.log(`Erro cod: ${err.status}`);
+    });
   }
 
 
-  
 
 }
