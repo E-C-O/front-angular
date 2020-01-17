@@ -22,6 +22,7 @@ import { ProdutoComponent } from './components/produto/produto.component';
 import { CadastroComponent } from './components/dynamic/cadastro/cadastro.component';
 import { CadastroListarComponent } from './components/dynamic/cadastro-listar/cadastro-listar.component';
 import { LoginComponent } from './components/dynamic/login/login.component';
+import { AjudaComponent } from './components/dynamic/ajuda/ajuda.component';
 
 
 @NgModule({
@@ -39,7 +40,8 @@ import { LoginComponent } from './components/dynamic/login/login.component';
     ProdutoComponent,
     CadastroComponent,
     CadastroListarComponent,
-    LoginComponent
+    LoginComponent,
+    AjudaComponent
 
 
   ],
