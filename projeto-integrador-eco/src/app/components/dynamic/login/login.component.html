@@ -30,8 +30,8 @@
                     </div>
                     <div class="div">
                         <!-- <h5>Senha</h5> -->
-                        <input placeholder="Senha" type="password" class="input" (keyup)="senhaIsInval()" [ngModelOptions]="{standalone: true}"
-                            [(ngModel)]="cadastro.senha">
+                        <input placeholder="Senha" type="password" class="input" (keyup)="senhaIsInval()"
+                            [ngModelOptions]="{standalone: true}" [(ngModel)]="cadastro.senha">
                     </div>
                     <div *ngIf="senhaInval">
                         <h5 class="alert-danger">Requerido</h5>

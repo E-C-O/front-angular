@@ -12,8 +12,8 @@ import { LoginComponent } from './components/dynamic/login/login.component';
 
 
 const routes: Routes = [
-  {path: 'products-id', component: ProductsIdComponent },
-  {path: 'products-list', component: ProductsListComponent },
+  { path: 'products-id', component: ProductsIdComponent },
+  { path: 'products-list', component: ProductsListComponent },
   { path: 'home', component: HomeComponent },
   { path: 'contato', component: ContatoComponent },
   { path: 'about', component: SobreNosComponent },
