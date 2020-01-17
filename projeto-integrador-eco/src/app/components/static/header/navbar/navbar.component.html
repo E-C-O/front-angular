@@ -7,7 +7,7 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item ">
-        <a class="nav-link font-color" href="#">Home <span class="sr-only">(current)</span></a>
+        <a class="nav-link font-color" [routerLink]="'/home'">Home <span class="sr-only">(current)</span></a>
       </li>
            <li class="nav-item">
         <a class="nav-link font-color" [routerLink]="'/produtos'">Produtos</a>
@@ -22,13 +22,16 @@
         <a class="nav-link font-color" [routerLink]="'/cadastro'">Cadastro</a>
     </li>
     <li class="nav-item">
-        <a class="nav-link font-color" href="#">Login</a>
+        <a class="nav-link font-color" [routerLink]="'/ajuda'">Ajuda</a>
     </li>
+    <!-- <li class="nav-item">
+        <a class="nav-link font-color" [routerLink]="'/login'">Login</a>
+    </li> -->
       
           </ul>
     <form class="form-inline my-2 my-lg-0">
       <input class="form-control mr-sm-2 click-color" type="search" placeholder="Busca" aria-label="Search">
-      <input type="submit" class="btn" value="Entrar">
+      <input type="submit" [routerLink]="'/login'" class="btn" value="Entrar">
     </form>
   </div>
 </nav>
