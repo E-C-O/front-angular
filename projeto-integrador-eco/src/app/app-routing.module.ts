@@ -1,3 +1,4 @@
+import { AjudaComponent } from './components/dynamic/ajuda/ajuda.component';
 import { CadastroComponent } from './components/dynamic/cadastro/cadastro.component';
 import { ProductsListComponent } from './components/dynamic/products-list/products-list.component';
 import { ProductsIdComponent } from './components/dynamic/products-id/products-id.component';
@@ -20,7 +21,8 @@ const routes: Routes = [
   { path: 'produtos', component: ProdutoComponent },
   { path: 'cadastro', component: CadastroComponent},
   { path: 'cadastro-listar', component: CadastroListarComponent},
-  { path: 'login', component: LoginComponent}
+  { path: 'login', component: LoginComponent},
+  {path: 'ajuda', component: AjudaComponent}
 ];
 
 @NgModule({

@@ -9,6 +9,7 @@ export class AjudaComponent implements OnInit {
 
   constructor() { }
 
+
   ngOnInit() {
   }
 
