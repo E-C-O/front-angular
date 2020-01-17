@@ -1,19 +1,29 @@
+import { Globals } from 'src/app/model/globals';
 
 import { Component, OnInit } from '@angular/core';
 import { Cadastro } from 'src/app/model/cadastro';
 import { CadastroService } from 'src/app/service/cadastro/cadastro.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-cadastro-listar',
   templateUrl: './cadastro-listar.component.html',
-  styleUrls: ['./cadastro-listar.component.css']
+  styleUrls: ['./cadastro-listar.component.css'],
+  providers: [ Globals ]
 })
 export class CadastroListarComponent implements OnInit {
 
   usuarios = [];
-  constructor(private cadastroService: CadastroService) { }
+  constructor(private cadastroService: CadastroService, private router : Router) { }
 
+  cadastro : Cadastro;
   ngOnInit() {
+    if (Globals.CADASTRO == undefined) {
+      this.router.navigate(['login']);
+    } 
+    else {
+      this.cadastro = Globals.CADASTRO;
+    }
     this.findAll();
   }
 
