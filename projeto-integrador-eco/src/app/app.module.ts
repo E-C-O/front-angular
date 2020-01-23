@@ -18,7 +18,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { ProductsListComponent } from './components/dynamic/products-list/products-list.component';
 import { ProductsIdComponent } from './components/dynamic/products-id/products-id.component';
-import { ProdutoComponent } from './components/produto/produto.component';
+import { ProdutoComponent } from './components/dynamic/produto/produto.component';
 import { CadastroComponent } from './components/dynamic/cadastro/cadastro.component';
 import { CadastroListarComponent } from './components/dynamic/cadastro-listar/cadastro-listar.component';
 import { LoginComponent } from './components/dynamic/login/login.component';
