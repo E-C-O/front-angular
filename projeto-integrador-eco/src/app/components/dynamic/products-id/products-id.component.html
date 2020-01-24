@@ -38,7 +38,7 @@ Qtd Estoque: {{products.qtdEstoque}} <br />  -->
 
             <div>
                 <div class="row row-cols-1 row-cols-md-3">
-                    <div class="col mb-4" >
+                    <div class="col mb-4" *ngIf="consulta">
                         <div class="card h-100">
                             <img src="{{products.linkfoto}}" class="card-img-top" alt="Imagem do produto">
                             <div class="card-body">

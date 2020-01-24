@@ -1,3 +1,5 @@
+import { ProdutoAtualizarComponent } from './components/dynamic/produto-atualizar/produto-atualizar.component';
+import { ProdutoCadastroComponent } from './components/dynamic/produto-cadastro/produto-cadastro.component';
 import { AjudaComponent } from './components/dynamic/ajuda/ajuda.component';
 import { CadastroComponent } from './components/dynamic/cadastro/cadastro.component';
 import { ProductsListComponent } from './components/dynamic/products-list/products-list.component';
@@ -21,10 +23,13 @@ const routes: Routes = [
   { path: 'about', component: SobreNosComponent },
   { path: 'produtos', component: ProductsListComponent },
   { path: 'produto', component: ProductsIdComponent },
-  { path: 'cadastro', component: CadastroComponent},
-  { path: 'cadastro-listar', component: CadastroListarComponent},
-  { path: 'login', component: LoginComponent},
-  {path: 'ajuda', component: AjudaComponent}
+  { path: 'produtoCadastro', component: ProdutoCadastroComponent },
+  { path: 'produtoAtualizar', component: ProdutoAtualizarComponent },
+  { path: 'produtoCadastro/:id', component: ProdutoCadastroComponent },
+  { path: 'cadastro', component: CadastroComponent },
+  { path: 'cadastro-listar', component: CadastroListarComponent },
+  { path: 'login', component: LoginComponent },
+  {path: 'ajuda', component: AjudaComponent }
 ];
 
 @NgModule({

@@ -18,7 +18,7 @@ export class ProductsIdComponent implements OnInit {
   }
   searchClick(){
     this.consulta = true;
-    this.ProductsService.get(this.idProduto).subscribe((productsOut: Products) =>{
+    this.ProductsService.getById(this.idProduto).subscribe((productsOut: Products) =>{
       this.products = productsOut;
     })
   }

@@ -18,12 +18,12 @@ export class ProductsListComponent implements OnInit {
   products: Products[];
   cadastro : Cadastro;
   ngOnInit() {
-    if (Globals.CADASTRO == undefined) {
-      this.router.navigate(['login']);
-    } 
-    else {
-      this.cadastro = Globals.CADASTRO;
-    }
+    // if (Globals.CADASTRO == undefined) {
+    //   this.router.navigate(['login']);
+    // } 
+    // else {
+    //   this.cadastro = Globals.CADASTRO;
+    // }
     this.findAll();
   }
 

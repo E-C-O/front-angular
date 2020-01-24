@@ -16,14 +16,15 @@
         <a class="nav-link font-color" [routerLink]="'/produtos'">Produtos</a>
       </li> -->
       <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" [routerLink] id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <a class="nav-link dropdown-toggle font-color" [routerLink] id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           Produtos
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
           <a class="dropdown-item" [routerLink]="['/produtos']">Todos</a>
           <a class="dropdown-item" [routerLink]="['/produto']">Buscar</a>
           <div class="dropdown-divider"></div>
-          <a class="dropdown-item" >Cadastro/Atualizar</a>
+          <a class="dropdown-item" [routerLink]="['/produtoCadastro']">Cadastro</a>
+          <a class="dropdown-item" [routerLink]="['/produtoAtualizar']">Atualizar</a>
         </div>
       </li>
       <li class="nav-item">
@@ -38,7 +39,10 @@
       <li class="nav-item">
         <a class="nav-link font-color" [routerLink]="'/login'">Login</a>
       </li>
-      <li class="nav-item dropdown">
+      <li class="nav-item">
+        <a class="nav-link font-color" [routerLink]="'/ajuda'">Ajuda</a>
+      </li>
+      <!-- <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle font-color " id="navbarDropdownMenuLink" role="button" data-toggle="dropdown"
           aria-haspopup="true" aria-expanded="false">
           Dropdown link
@@ -48,7 +52,7 @@
           <a class="dropdown-item" >Another action</a>
           <a class="dropdown-item">Something else here</a>
         </div>
-      </li>
+      </li> -->
 
     </ul>
     <form class="form-inline my-2 my-lg-0">
