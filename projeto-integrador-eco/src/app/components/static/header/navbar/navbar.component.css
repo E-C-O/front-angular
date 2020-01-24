@@ -27,6 +27,11 @@
     cursor: pointer;
     transition: .5s;
 }
+
+/* .padding-top{
+    background-color: #1f3b2c;
+    padding-top: 50px;
+} */
  
 .btn:hover {
     background-position: right;
