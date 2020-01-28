@@ -16,12 +16,12 @@ export class SobreNosComponent implements OnInit {
   constructor(private router : Router) { }
 
   ngOnInit() {
-    if (Globals.CADASTRO == undefined) {
-      this.router.navigate(['login']);
-    } 
-    else {
-      this.cadastro = Globals.CADASTRO;
-    }
+    // if (Globals.CADASTRO == undefined) {
+    //   this.router.navigate(['login']);
+    // } 
+    // else {
+    //   this.cadastro = Globals.CADASTRO;
+    // }
   }
 
   over0: boolean = false;

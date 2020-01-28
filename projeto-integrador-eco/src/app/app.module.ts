@@ -2,14 +2,13 @@ import { LoginService } from './service/login/login.service';
 import { CadastroService } from './service/cadastro/cadastro.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/static/header/header.component';
 import { FooterComponent } from './components/static/footer/footer.component';
 import { BodyComponent } from './components/static/body/body.component';
 import { ReactiveFormsModule } from '@angular/forms';
-
+import { MDBBootstrapModule } from 'angular-bootstrap-md';
 import { SobreNosComponent } from './components/dynamic/sobre-nos/sobre-nos.component';
 import { NavbarComponent } from './components/static/header/navbar/navbar.component';
 import { HomeComponent } from './components/dynamic/home/home.component';
@@ -25,6 +24,7 @@ import { LoginComponent } from './components/dynamic/login/login.component';
 import { AjudaComponent } from './components/dynamic/ajuda/ajuda.component';
 import { ProdutoCadastroComponent } from './components/dynamic/produto-cadastro/produto-cadastro.component';
 import { ProdutoAtualizarComponent } from './components/dynamic/produto-atualizar/produto-atualizar.component';
+import { SobreNosEmpresaComponent } from './components/dynamic/sobre-nos-empresa/sobre-nos-empresa.component';
 
 
 @NgModule({
@@ -45,7 +45,9 @@ import { ProdutoAtualizarComponent } from './components/dynamic/produto-atualiza
     LoginComponent,
     AjudaComponent,
     ProdutoCadastroComponent,
-    ProdutoAtualizarComponent
+    ProdutoAtualizarComponent,
+    SobreNosEmpresaComponent,
+    
 
 
   ],
@@ -53,7 +55,8 @@ import { ProdutoAtualizarComponent } from './components/dynamic/produto-atualiza
     BrowserModule, ReactiveFormsModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    MDBBootstrapModule.forRoot()
   ],
   providers: [CadastroService,
     LoginService],

@@ -27,9 +27,20 @@
           <a class="dropdown-item" [routerLink]="['/produtoAtualizar']">Atualizar</a>
         </div>
       </li>
-      <li class="nav-item">
-        <a class="nav-link font-color" [routerLink]="'/about'">Sobre nós</a>
+      <!--<li class="nav-item">
+        <a class="nav-link font-color" [routerLink]="'/sobrenos'">Sobre nós</a>
+      </li>-->
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle font-color" [routerLink] id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+         Quem somos
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" [routerLink]="['/sobrenos']">A Equipe</a>
+          <a class="dropdown-item" [routerLink]="['/empresa']">A Empresa</a>
+        
+        </div>
       </li>
+
       <li class="nav-item">
         <a class="nav-link font-color" [routerLink]="'/contato'">Contato</a>
       </li>
