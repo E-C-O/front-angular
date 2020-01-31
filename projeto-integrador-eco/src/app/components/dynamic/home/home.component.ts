@@ -17,7 +17,7 @@ export class HomeComponent implements OnInit {
   
   ngOnInit() {
     if (Globals.CADASTRO == undefined) {
-      this.router.navigate(['login']);
+      // this.router.navigate(['login']);
     } 
     else {
       this.cadastro = Globals.CADASTRO;

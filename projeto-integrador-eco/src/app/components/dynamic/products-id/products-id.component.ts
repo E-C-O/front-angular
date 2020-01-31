@@ -10,12 +10,15 @@ import { Products } from '../../../model/products';
 export class ProductsIdComponent implements OnInit {
   idProduto: number
   products: Products = new Products(0,'','','',0,0)
+  consulta: boolean;
   constructor(private ProductsService: ProductsService) { }
 
   ngOnInit() {
+    this.consulta = false;
   }
   searchClick(){
-    this.ProductsService.get(this.idProduto).subscribe((productsOut: Products) =>{
+    this.consulta = true;
+    this.ProductsService.getById(this.idProduto).subscribe((productsOut: Products) =>{
       this.products = productsOut;
     })
   }

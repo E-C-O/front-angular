@@ -9,6 +9,7 @@
 body {
 	font-family: 'Poppins', sans-serif;
 	overflow: hidden;
+	
 }
 
 /* .wave {
@@ -27,9 +28,12 @@ body {
 }
 .fundo{
 	background-repeat: no-repeat;
-	height: 600px;
+	max-width: 100%;
+	height:auto;
+	/* height: 600px; */
 	background-image: url("../../../../assets/back.png");
-	background-size: 40%;
+	/* background-size: 40%; */
+	
 }
 
 .container {

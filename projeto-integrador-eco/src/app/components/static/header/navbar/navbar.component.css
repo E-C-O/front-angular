@@ -1,8 +1,10 @@
 .nav-color{
-    background-color: #588068;
+    background-color:#588068
 }
 .font-color{
     color: #f5f3f5;
+    font-family: 'poppins', sans-serif;
+    text-transform: uppercase;
 }
 .font-color:hover{
     color: #e5b0a4;
@@ -27,6 +29,11 @@
     cursor: pointer;
     transition: .5s;
 }
+
+/* .padding-top{
+    background-color: #1f3b2c;
+    padding-top: 50px;
+} */
  
 .btn:hover {
     background-position: right;
