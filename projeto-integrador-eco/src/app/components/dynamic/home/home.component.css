@@ -13,11 +13,7 @@ hr{
     text-align: center;
 }
 
-.banner1{
-font-size: larger;
-}
-
-/* .container{
+.container{
     width: 100%;
     margin-top: 10%;
     font-family: sans-serif;
@@ -87,4 +83,4 @@ img{
     background: transparent !important;
     border:none !important;
     box-shadow: none !important;
-} */
+}
