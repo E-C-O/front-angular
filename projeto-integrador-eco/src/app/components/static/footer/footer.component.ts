@@ -11,5 +11,8 @@ export class FooterComponent implements OnInit {
 
   ngOnInit() {
   }
-
+  
+  sobeTopo(){
+    window.scroll({left: 0, top: 0, behavior: 'smooth'})
+  }
 }

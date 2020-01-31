@@ -122,15 +122,12 @@ h4{
     color: #588068;
 }
 
-.parallax {
-    /* The image used */
+/* .parallax {
+  
     background-image: url("../../../../assets/button_up.png");
-  
-    /* Set a specific height */
-    height: 500px;
-  
-    /* Create the parallax scrolling effect */
+    height: 50px;
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: cover; 
+} */

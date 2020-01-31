@@ -1,3 +1,8 @@
+.fundofrete{
+    background-color: black;
+    width: 100%;
+    height: 80px;
+}
 .fonte{
     font-family: 'poppins', sans-serif;
 }
@@ -13,7 +18,7 @@ hr{
     text-align: center;
 }
 
-.container{
+/* .container{
     width: 100%;
     margin-top: 10%;
     font-family: sans-serif;
@@ -83,4 +88,58 @@ img{
     background: transparent !important;
     border:none !important;
     box-shadow: none !important;
+} */
+
+*{
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
 }
+body{
+    background: #e5b0a4;
+}
+.container{
+    text-align: center;
+    position: relative;
+    display: block;
+ 
+    /* transform: transform(-50% -50%); */
+    width: 2000px;   
+     background: black;
+
+}
+.container h1{
+    text-transform: uppercase;
+    display: block ;
+    background: black;
+    float: inline;
+
+}
+.text1{
+    color: white;
+    font-size: 60px;
+    font-weight: 700;
+    letter-spacing: 8px;
+    margin-bottom: 20px;
+    background: black;
+    /* position: ; */
+    animation: text 3s 1
+}
+/* .text2{
+    font-size: 30px;
+    color: red;
+}
+@keyframes text{
+0%{
+    color:black;
+    margin-bottom: -40px;
+}
+30%{
+    letter-spacing: 25px;
+    margin-bottom: -40%;
+   
+}
+85%{
+    letter-spacing: 8px;
+    margin-bottom: -40px;
+}} */

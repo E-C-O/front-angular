@@ -13,6 +13,7 @@ import { SobreNosComponent } from './components/dynamic/sobre-nos/sobre-nos.comp
 import { ProdutoComponent } from './components/dynamic/produto/produto.component';
 import { CadastroListarComponent } from './components/dynamic/cadastro-listar/cadastro-listar.component';
 import { LoginComponent } from './components/dynamic/login/login.component';
+import { AssociadosComponent } from './components/dynamic/associados/associados.component';
 
 
 const routes: Routes = [
@@ -31,7 +32,8 @@ const routes: Routes = [
   { path: 'cadastro-listar', component: CadastroListarComponent },
   { path: 'login', component: LoginComponent },
   {path: 'ajuda', component: AjudaComponent },
-  {path:'empresa', component: SobreNosEmpresaComponent}
+  {path:'empresa', component: SobreNosEmpresaComponent},
+  {path: 'associados', component:AssociadosComponent}
 ];
 
 @NgModule({

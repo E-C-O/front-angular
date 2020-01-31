@@ -25,6 +25,7 @@ import { AjudaComponent } from './components/dynamic/ajuda/ajuda.component';
 import { ProdutoCadastroComponent } from './components/dynamic/produto-cadastro/produto-cadastro.component';
 import { ProdutoAtualizarComponent } from './components/dynamic/produto-atualizar/produto-atualizar.component';
 import { SobreNosEmpresaComponent } from './components/dynamic/sobre-nos-empresa/sobre-nos-empresa.component';
+import { AssociadosComponent } from './components/dynamic/associados/associados.component';
 
 
 @NgModule({
@@ -47,6 +48,7 @@ import { SobreNosEmpresaComponent } from './components/dynamic/sobre-nos-empresa
     ProdutoCadastroComponent,
     ProdutoAtualizarComponent,
     SobreNosEmpresaComponent,
+    AssociadosComponent,
     
 
 

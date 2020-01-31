@@ -5,6 +5,7 @@
     color: #f5f3f5;
     font-family: 'poppins', sans-serif;
     text-transform: uppercase;
+    text-shadow: 2px 2px black;
 }
 .font-color:hover{
     color: #e5b0a4;
@@ -30,6 +31,8 @@
     transition: .5s;
 }
 
+
+
 /* .padding-top{
     background-color: #1f3b2c;
     padding-top: 50px;
@@ -49,3 +52,8 @@
     border:2px solid #e5b0a4;
     
 }
+
+/* .borda{
+    border-style: dotted;
+    color: #e5b0a4;
+} */
