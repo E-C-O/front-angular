@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Products } from 'src/app/model/products';
+import { Produto } from 'src/app/model/produto';
 import { ProductsService } from 'src/app/service/products.service';
 import { Globals } from 'src/app/model/globals';
 import { Router } from '@angular/router';
@@ -15,7 +15,7 @@ export class ProductsListComponent implements OnInit {
 
   constructor(private ProductsService: ProductsService, private router : Router) { }
 
-  products: Products[];
+  products: Produto[];
   cadastro : Cadastro;
   ngOnInit() {
     // if (Globals.CADASTRO == undefined) {
@@ -28,7 +28,7 @@ export class ProductsListComponent implements OnInit {
   }
 
   findAll(){
-    this.ProductsService.getAll().subscribe((productsOut: Products[])=>{
+    this.ProductsService.getAll().subscribe((productsOut: Produto[])=>{
       this.products = productsOut;
     })
   }

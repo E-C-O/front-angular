@@ -8,7 +8,7 @@ import { HeaderComponent } from './components/static/header/header.component';
 import { FooterComponent } from './components/static/footer/footer.component';
 import { BodyComponent } from './components/static/body/body.component';
 import { ReactiveFormsModule } from '@angular/forms';
-import { MDBBootstrapModule } from 'angular-bootstrap-md';
+// import { MDBBootstrapModule } from 'angular-bootstrap-md';
 import { SobreNosComponent } from './components/dynamic/sobre-nos/sobre-nos.component';
 import { NavbarComponent } from './components/static/header/navbar/navbar.component';
 import { HomeComponent } from './components/dynamic/home/home.component';
@@ -58,7 +58,7 @@ import { AssociadosComponent } from './components/dynamic/associados/associados.
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
-    MDBBootstrapModule.forRoot()
+    // MDBBootstrapModule.forRoot()
   ],
   providers: [CadastroService,
     LoginService],
