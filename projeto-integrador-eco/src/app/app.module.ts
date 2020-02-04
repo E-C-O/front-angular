@@ -26,6 +26,8 @@ import { ProdutoCadastroComponent } from './components/dynamic/produto-cadastro/
 import { ProdutoAtualizarComponent } from './components/dynamic/produto-atualizar/produto-atualizar.component';
 import { SobreNosEmpresaComponent } from './components/dynamic/sobre-nos-empresa/sobre-nos-empresa.component';
 import { AssociadosComponent } from './components/dynamic/associados/associados.component';
+import { CategoriaCadastroComponent } from './components/dynamic/categoria-cadastro/categoria-cadastro.component';
+
 
 
 @NgModule({
@@ -49,6 +51,7 @@ import { AssociadosComponent } from './components/dynamic/associados/associados.
     ProdutoAtualizarComponent,
     SobreNosEmpresaComponent,
     AssociadosComponent,
+    CategoriaCadastroComponent,
     
 
 

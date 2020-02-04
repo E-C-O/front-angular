@@ -1,7 +1,7 @@
 import { Produto } from './produto';
 
 export class Categoria {
-    public idCategoria: number;
+    public id: number;
     public nome: string;
     public produto: Produto[];
 }

@@ -2,7 +2,6 @@ import { Venda } from './venda';
 import { Categoria } from './categoria';
 
 export class Produto {
-    
     public id: number;
     public nome: string;
     public descricao: string;

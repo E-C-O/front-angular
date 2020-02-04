@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Produto } from 'src/app/model/produto';
 import { ProdutoService } from 'src/app/service/produto/produto.service';
+import { Categoria } from 'src/app/model/categoria';
 
 @Component({
   selector: 'app-produto-atualizar',
@@ -11,6 +12,8 @@ import { ProdutoService } from 'src/app/service/produto/produto.service';
 export class ProdutoAtualizarComponent implements OnInit {
 
   produto : Produto = new Produto();
+  categoriaId : number;
+  categoria : Categoria = new Categoria();
   idValid : boolean = true;
 
   constructor(private produtoService: ProdutoService,
@@ -39,6 +42,9 @@ export class ProdutoAtualizarComponent implements OnInit {
   atualizar() {
     // this.idValido();
     // if(!this.idValid){
+      this.categoria.id = this.categoriaId;
+      this.produto.categoria = this.categoria;
+      alert(this.categoriaId);
       this.produtoService.update(this.produto).subscribe((produto: Produto) => {
         this.produto = produto;
         alert("Atualizado com sucesso!");

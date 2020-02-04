@@ -14,11 +14,11 @@ export class CategoriaService {
   }
 
   getById(id: number){
-    return this.http.get(`http://localhost:8080/categoria/{id}`);
+    return this.http.get(`http://localhost:8080/categoria/${id}`);
   }
 
   getByNome(nome: string){
-    return this.http.get(`http://localhost:8080/categoria/{nome}`)
+    return this.http.get(`http://localhost:8080/categoria/${nome}`)
   }
 
   insert(categoria: Categoria){
@@ -32,8 +32,7 @@ export class CategoriaService {
   update(categoria: Categoria){
     return this.http.put(`http://localhost:8080/categoria`, categoria);
   }
-  
   delete(id: number){
-    return this.http.delete(`http://localhost:8080/categoria/{id}`);
+    return this.http.delete(`http://localhost:8080/categoria/${id}`);
   }
 }
