@@ -1,7 +1,8 @@
 import { Usuario } from './usuario';
 
 export class Endereco {
-    public idEndereco: number;
+  
+    public id: number;
     public rua: string;
     public numero: number;
     public bairro: string;

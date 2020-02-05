@@ -1,3 +1,5 @@
+import { Endereco } from './model/endereco';
+import { EnderecoAtualizarComponent } from './components/endereco/endereco-atualizar/endereco-atualizar.component';
 import { SobreNosEmpresaComponent } from './components/dynamic/sobre-nos-empresa/sobre-nos-empresa.component';
 import { ProdutoAtualizarComponent } from './components/dynamic/produto-atualizar/produto-atualizar.component';
 import { ProdutoCadastroComponent } from './components/dynamic/produto-cadastro/produto-cadastro.component';
@@ -14,6 +16,9 @@ import { ProdutoComponent } from './components/dynamic/produto/produto.component
 import { CadastroListarComponent } from './components/dynamic/cadastro-listar/cadastro-listar.component';
 import { LoginComponent } from './components/dynamic/login/login.component';
 import { AssociadosComponent } from './components/dynamic/associados/associados.component';
+import { EnderecoCadastroComponent } from './components/endereco/endereco-cadastro/endereco-cadastro.component';
+import { EnderecoIdComponent } from './components/endereco/endereco-id/endereco-id.component';
+import { EnderecoListComponent } from './components/endereco/endereco-list/endereco-list.component';
 
 
 const routes: Routes = [
@@ -33,7 +38,12 @@ const routes: Routes = [
   { path: 'login', component: LoginComponent },
   {path: 'ajuda', component: AjudaComponent },
   {path:'empresa', component: SobreNosEmpresaComponent},
-  {path: 'associados', component:AssociadosComponent}
+  {path: 'associados', component:AssociadosComponent},
+  {path: 'endereco', component: Endereco},
+  {path: 'enderecoAtualizar', component:EnderecoAtualizarComponent},
+  {path: 'enderecoCadastro', component:EnderecoCadastroComponent},
+  {path: 'enderecoId', component:EnderecoIdComponent},
+  {path: 'enderecoList', component:EnderecoListComponent},
 ];
 
 @NgModule({

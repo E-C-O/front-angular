@@ -26,6 +26,10 @@ import { ProdutoCadastroComponent } from './components/dynamic/produto-cadastro/
 import { ProdutoAtualizarComponent } from './components/dynamic/produto-atualizar/produto-atualizar.component';
 import { SobreNosEmpresaComponent } from './components/dynamic/sobre-nos-empresa/sobre-nos-empresa.component';
 import { AssociadosComponent } from './components/dynamic/associados/associados.component';
+import { EnderecoListComponent } from './components/endereco/endereco-list/endereco-list.component';
+import { EnderecoIdComponent } from './components/endereco/endereco-id/endereco-id.component';
+import { EnderecoAtualizarComponent } from './components/endereco/endereco-atualizar/endereco-atualizar.component';
+import { EnderecoCadastroComponent } from './components/endereco/endereco-cadastro/endereco-cadastro.component';
 
 
 @NgModule({
@@ -49,6 +53,10 @@ import { AssociadosComponent } from './components/dynamic/associados/associados.
     ProdutoAtualizarComponent,
     SobreNosEmpresaComponent,
     AssociadosComponent,
+    EnderecoListComponent,
+    EnderecoIdComponent,
+    EnderecoAtualizarComponent,
+    EnderecoCadastroComponent,
     
 
 

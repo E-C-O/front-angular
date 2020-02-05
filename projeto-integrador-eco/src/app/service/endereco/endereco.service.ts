@@ -15,11 +15,11 @@ export class EnderecoService {
   }
 
   getById(id: number){
-    return this.http.get(`http://localhost:8080/endereco/{id}`);
+    return this.http.get(`http://localhost:8080/endereco/${id}`);
   }
 
   getByRua(rua: string){
-    return this.http.get(`http://localhost:8080/endereco/{rua}`)
+    return this.http.get(`http://localhost:8080/endereco/${rua}`)
   }
 
   insert(endereco: Endereco){
@@ -35,6 +35,6 @@ export class EnderecoService {
   }
   
   deleteById(id: number){
-    return this.http.delete(`http://localhost:8080/endereco/{id}`);
+    return this.http.delete(`http://localhost:8080/endereco/${id}`);
   }
 }
