@@ -15,11 +15,13 @@ import { ProdutoComponent } from './components/dynamic/produto/produto.component
 import { CadastroListarComponent } from './components/dynamic/cadastro-listar/cadastro-listar.component';
 import { LoginComponent } from './components/dynamic/login/login.component';
 import { AssociadosComponent } from './components/dynamic/associados/associados.component';
+import { PerfilComponent } from './components/dynamic/perfil/perfil.component';
 
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'home', component: HomeComponent },
+  { path: 'perfil', component: PerfilComponent },
   { path: 'products-id', component: ProductsIdComponent },
   { path: 'products-list', component: ProductsListComponent },
   { path: 'categoriaCadastro', component: CategoriaCadastroComponent },
@@ -35,7 +37,14 @@ const routes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'ajuda', component: AjudaComponent },
   { path:'empresa', component: SobreNosEmpresaComponent},
-  { path: 'associados', component:AssociadosComponent}
+  { path: 'associados', component:AssociadosComponent},
+  { path: 'perfil', component: PerfilComponent,
+    children: [
+      { path: '', redirectTo: 'perfil', pathMatch: 'full' },
+      // { path: 'enderecos', component:  },
+      
+    ]
+  }
 ];
 
 @NgModule({

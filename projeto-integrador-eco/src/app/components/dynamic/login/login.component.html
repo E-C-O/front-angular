@@ -19,7 +19,7 @@
                     <div class="div">
                         <!-- <h5>Usuário</h5> -->
                         <input name="email" placeholder="Email" type="text" class="input" (keyup)="emailIsInval()"
-                            [ngModelOptions]="{standalone: true}" [(ngModel)]="cadastro.email" required>
+                            [ngModelOptions]="{standalone: true}" [(ngModel)]="userLogin.email" required>
                     </div>
                     <div *ngIf="emailInval">
                         <h5 class="alert-danger">Requerido</h5>
@@ -32,7 +32,7 @@
                     <div class="div">
                         <!-- <h5>Senha</h5> -->
                         <input placeholder="Senha" type="password" class="input" (keyup)="senhaIsInval()"
-                            [ngModelOptions]="{standalone: true}" [(ngModel)]="cadastro.senha">
+                            [ngModelOptions]="{standalone: true}" [(ngModel)]="userLogin.senha">
                     </div>
                     <div *ngIf="senhaInval">
                         <h5 class="alert-danger">Requerido</h5>

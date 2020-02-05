@@ -1,0 +1,33 @@
+<div class="container">
+    <div class="row col-12">
+    </div>
+    <div class="col-4">
+        <div style="padding-top: 100px">
+
+            <p-card style="text-align: center"  header="Advanced Card" subheader="Informações" [style]="{width: '360px'}" styleClass="ui-card-shadow">
+                <p-header>
+                    <h3 class="font">{{user.nome}}</h3>
+                </p-header>
+                <div>
+                    <p>{{user.email}}</p>
+                    
+                    <div *ngFor="let item of enderecos">
+
+                    </div>
+                    
+                </div>
+                <p-footer>
+                    <button pButton type="button" label="Save" icon="pi pi-check" style="margin-right: .25em">Atualizar perfil</button>
+                    <button pButton type="button" label="Cancel" icon="pi pi-times"
+                        class="ui-button-secondary">Endereços</button>
+                </p-footer>
+            </p-card>
+        </div>
+    </div>
+    <div class="col-4">
+        
+    </div>
+    <div class="col-4">
+
+    </div>
+</div>

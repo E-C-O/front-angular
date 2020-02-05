@@ -1,26 +1,26 @@
-import { Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 import { Globals } from 'src/app/model/globals';
 import { Usuario } from 'src/app/model/usuario';
+import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-contato',
-  templateUrl: './contato.component.html',
-  styleUrls: ['./contato.component.css'],
+  selector: 'app-perfil',
+  templateUrl: './perfil.component.html',
+  styleUrls: ['./perfil.component.css'],
   providers: [ Globals]
 })
-export class ContatoComponent implements OnInit {
+export class PerfilComponent implements OnInit {
+
+    user:Usuario;
 
   constructor(private router : Router) { }
-  
-  cadastro : Usuario;
 
   ngOnInit() {
-    if (Globals.CADASTRO == undefined) {
+   if (Globals.CADASTRO == undefined) {
       this.router.navigate(['login']);
     } 
     else {
-      this.cadastro = Globals.CADASTRO;
+      this.user = Globals.CADASTRO;
     }
   }
 

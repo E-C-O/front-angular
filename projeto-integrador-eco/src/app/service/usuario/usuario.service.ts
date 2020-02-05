@@ -15,11 +15,11 @@ export class UsuarioService {
   }
 
   getById(id: number){
-    return this.http.get(`http://localhost:8080/usuario/{id}`);
+    return this.http.get(`http://localhost:8080/usuario/${id}`);
   }
 
   getByAllName(nome: string){
-    return this.http.get(`http://localhost:8080/usuario/{nome}`)
+    return this.http.get(`http://localhost:8080/usuario/${nome}`)
   }
 
   insert(usuario: Usuario){
@@ -35,6 +35,6 @@ export class UsuarioService {
   }
   
   delete(id: number){
-    return this.http.delete(`http://localhost:8080/usuario/{id}`);
+    return this.http.delete(`http://localhost:8080/usuario/${id}`);
   }
 }

@@ -1,6 +1,8 @@
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { LoginService } from './service/login/login.service';
 import { CadastroService } from './service/cadastro/cadastro.service';
 import { BrowserModule } from '@angular/platform-browser';
+import {MultiSelectModule} from 'primeng/multiselect';
 import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -27,6 +29,9 @@ import { ProdutoAtualizarComponent } from './components/dynamic/produto-atualiza
 import { SobreNosEmpresaComponent } from './components/dynamic/sobre-nos-empresa/sobre-nos-empresa.component';
 import { AssociadosComponent } from './components/dynamic/associados/associados.component';
 import { CategoriaCadastroComponent } from './components/dynamic/categoria-cadastro/categoria-cadastro.component';
+import { PerfilComponent } from './components/dynamic/perfil/perfil.component';
+import {DropdownModule} from 'primeng/dropdown';
+import {CardModule} from 'primeng/card';
 
 
 
@@ -52,8 +57,7 @@ import { CategoriaCadastroComponent } from './components/dynamic/categoria-cadas
     SobreNosEmpresaComponent,
     AssociadosComponent,
     CategoriaCadastroComponent,
-    
-
+    PerfilComponent
 
   ],
   imports: [
@@ -61,6 +65,12 @@ import { CategoriaCadastroComponent } from './components/dynamic/categoria-cadas
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
+    BrowserModule,
+    BrowserAnimationsModule,
+    DropdownModule,
+    MultiSelectModule,
+    CardModule
+    
     // MDBBootstrapModule.forRoot()
   ],
   providers: [CadastroService,

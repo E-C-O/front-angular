@@ -14,11 +14,15 @@ export class CategoriaCadastroComponent implements OnInit {
   categoriaId : number;
   categoria : Categoria =  new Categoria();
   categorias : Categoria[];
+  nomeCategoria : string;
+
   constructor(
     private categoriaService: CategoriaService
   ) { }
 
   ngOnInit() {
+
+   
     this.listarCategoria();
   }
 
@@ -36,7 +40,7 @@ export class CategoriaCadastroComponent implements OnInit {
   cadastrar(){
     
     this.categoriaService.insert(this.categoria).subscribe((out : Categoria) =>{
-      // alert("Cadastrado com sucesso!");
+      alert("Cadastrado com sucesso!");
       this.listarCategoria();
     },err =>{
       alert("Erro ao cadastrar");
@@ -47,6 +51,17 @@ export class CategoriaCadastroComponent implements OnInit {
     this.categoriaService.getAll().subscribe((out : Categoria[])=>{
       this.categorias = out;
     })
+  }
+
+  buscaNome(){
+    if(this.nomeCategoria == ""){
+      this.listarCategoria();
+    }
+    else{
+      this.categoriaService.getByNome(this.nomeCategoria).subscribe((out : Categoria[])=>{
+        this.categorias  = out;
+      });
+    }
   }
 
 }

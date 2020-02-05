@@ -18,7 +18,7 @@ export class CategoriaService {
   }
 
   getByNome(nome: string){
-    return this.http.get(`http://localhost:8080/categoria/${nome}`)
+    return this.http.get(`http://localhost:8080/categoria/nome/${nome}`);
   }
 
   insert(categoria: Categoria){
