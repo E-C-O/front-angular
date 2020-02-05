@@ -21,8 +21,6 @@ export class CategoriaCadastroComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-
-   
     this.listarCategoria();
   }
 

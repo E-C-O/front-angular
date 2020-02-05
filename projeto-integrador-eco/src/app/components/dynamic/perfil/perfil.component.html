@@ -1,33 +1,33 @@
-<div class="container">
-    <div class="row col-12">
+<div class="container" style="padding-bottom: 30px;">
+    <div style="padding-top:25px;" class="text-center">
+        <h1>Perfil</h1>
     </div>
-    <div class="col-4">
-        <div style="padding-top: 100px">
-
-            <p-card style="text-align: center"  header="Advanced Card" subheader="Informações" [style]="{width: '360px'}" styleClass="ui-card-shadow">
-                <p-header>
-                    <h3 class="font">{{user.nome}}</h3>
-                </p-header>
-                <div>
-                    <p>{{user.email}}</p>
-                    
-                    <div *ngFor="let item of enderecos">
-
+    <div class="row col-12" style="padding-top: 50px">
+        <div class="col-3" >
+            <div>
+                <p-card style="text-align: left; "subheader="Informações"
+                    [style]="{width: '300px'}" styleClass="ui-card-shadow">
+                    <p-header>
+                        <h3 style="padding-left: 10px"class="font">{{user.nome}}</h3>
+                    </p-header>
+                    <div >
+                        <p>Email:  {{user.email}}</p>
+                        <p>Lorem ipsum dolor</p>
+                        <p> sit amet, consectetur</p>
                     </div>
-                    
-                </div>
-                <p-footer>
-                    <button pButton type="button" label="Save" icon="pi pi-check" style="margin-right: .25em">Atualizar perfil</button>
-                    <button pButton type="button" label="Cancel" icon="pi pi-times"
-                        class="ui-button-secondary">Endereços</button>
-                </p-footer>
-            </p-card>
+                    <p-footer>
+                        <button pButton type="button" [routerLink]="['/cadastroAtualizar']"
+                            routerLinkActive="router-link-active" icon="pi pi-check"
+                            style="margin-right: .25em">Atualizar
+                            perfil</button>
+                        <button pButton type="button" [routerLink]="['/perfil/enderecos']" icon="pi pi-times"
+                            class="ui-button-secondary">Endereços</button>
+                    </p-footer>
+                </p-card>
+            </div>
         </div>
-    </div>
-    <div class="col-4">
-        
-    </div>
-    <div class="col-4">
-
+        <div class="col-8">
+            <router-outlet></router-outlet>
+        </div>
     </div>
 </div>

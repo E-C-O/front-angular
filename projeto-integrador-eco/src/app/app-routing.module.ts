@@ -1,4 +1,7 @@
+import { CadastroAtualizarComponent } from './components/dynamic/cadastro-atualizar/cadastro-atualizar.component';
 import { CategoriaCadastroComponent } from './components/dynamic/categoria-cadastro/categoria-cadastro.component';
+import { Endereco } from './model/endereco';
+
 import { SobreNosEmpresaComponent } from './components/dynamic/sobre-nos-empresa/sobre-nos-empresa.component';
 import { ProdutoAtualizarComponent } from './components/dynamic/produto-atualizar/produto-atualizar.component';
 import { ProdutoCadastroComponent } from './components/dynamic/produto-cadastro/produto-cadastro.component';
@@ -16,6 +19,11 @@ import { CadastroListarComponent } from './components/dynamic/cadastro-listar/ca
 import { LoginComponent } from './components/dynamic/login/login.component';
 import { AssociadosComponent } from './components/dynamic/associados/associados.component';
 import { PerfilComponent } from './components/dynamic/perfil/perfil.component';
+import { EnderecoAtualizarComponent } from './components/dynamic/endereco/endereco-atualizar/endereco-atualizar.component';
+import { EnderecoCadastroComponent } from './components/dynamic/endereco/endereco-cadastro/endereco-cadastro.component';
+import { EnderecoIdComponent } from './components/dynamic/endereco/endereco-id/endereco-id.component';
+import { EnderecoListComponent } from './components/dynamic/endereco/endereco-list/endereco-list.component';
+
 
 
 const routes: Routes = [
@@ -38,13 +46,18 @@ const routes: Routes = [
   { path: 'ajuda', component: AjudaComponent },
   { path:'empresa', component: SobreNosEmpresaComponent},
   { path: 'associados', component:AssociadosComponent},
+  { path: 'endereco', component: Endereco},
+  { path: 'enderecoId', component:EnderecoIdComponent},
+  { path: 'cadastroAtualizar', component:CadastroAtualizarComponent},
   { path: 'perfil', component: PerfilComponent,
-    children: [
-      { path: '', redirectTo: 'perfil', pathMatch: 'full' },
-      // { path: 'enderecos', component:  },
-      
+  children: [
+    { path: '', redirectTo: 'perfil', pathMatch: 'full' },
+    { path: 'enderecos', component: EnderecoListComponent },
+    { path: 'enderecoCadastro', component:EnderecoCadastroComponent},
+    { path: 'enderecoAtualizar/:id', component:EnderecoAtualizarComponent},
+    
     ]
-  }
+  },
 ];
 
 @NgModule({
