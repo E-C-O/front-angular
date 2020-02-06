@@ -92,7 +92,7 @@ export class ProdutoCadastroComponent implements OnInit {
       this.produto = produto;
       // alert(this.categoria.id)
       alert("Cadastrado com sucesso!");
-      this.router.navigate(['/produtos']);
+      this.router.navigate(['/produto/produtos']);
     }, err => {
       console.log(`Erro cod: ${err.status}`);
       alert(`Erro cod: ${err.status}`);

@@ -30,16 +30,18 @@ const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'home', component: HomeComponent },
   { path: 'perfil', component: PerfilComponent },
-  { path: 'products-id', component: ProductsIdComponent },
-  { path: 'products-list', component: ProductsListComponent },
-  { path: 'categoriaCadastro', component: CategoriaCadastroComponent },
   { path: 'contato', component: ContatoComponent },
   { path: 'sobrenos', component: SobreNosComponent },
-  { path: 'produtos', component: ProductsListComponent },
-  { path: 'produto', component: ProductsIdComponent },
-  { path: 'produtoCadastro', component: ProdutoCadastroComponent },
-  { path: 'produtoAtualizar', component: ProdutoAtualizarComponent },
-  { path: 'produtoCadastro/:id', component: ProdutoCadastroComponent },
+  { path: 'categoriaCadastro', component: CategoriaCadastroComponent },
+  { path: 'produto', component: ProdutoComponent,
+        children: [
+          { path: 'produtos', component: ProductsListComponent },
+          { path: 'produto', component: ProductsIdComponent },
+          { path: 'produtoCadastro', component: ProdutoCadastroComponent },
+          { path: 'produtoAtualizar', component: ProdutoAtualizarComponent },
+          { path: 'produtoCadastro/:id', component: ProdutoCadastroComponent }
+        ]},
+
   { path: 'cadastro', component: CadastroComponent },
   { path: 'cadastro-listar', component: CadastroListarComponent },
   { path: 'login', component: LoginComponent },
@@ -50,13 +52,13 @@ const routes: Routes = [
   { path: 'enderecoId', component:EnderecoIdComponent},
   { path: 'cadastroAtualizar', component:CadastroAtualizarComponent},
   { path: 'perfil', component: PerfilComponent,
-  children: [
-    { path: '', redirectTo: 'perfil', pathMatch: 'full' },
-    { path: 'enderecos', component: EnderecoListComponent },
-    { path: 'enderecoCadastro', component:EnderecoCadastroComponent},
-    { path: 'enderecoAtualizar/:id', component:EnderecoAtualizarComponent},
-    
-    ]
+      children: [
+        { path: '', redirectTo: 'perfil', pathMatch: 'full' },
+        { path: 'enderecos', component: EnderecoListComponent },
+        { path: 'enderecoCadastro', component:EnderecoCadastroComponent},
+        { path: 'enderecoAtualizar/:id', component:EnderecoAtualizarComponent},
+        
+        ]
   },
 ];
 

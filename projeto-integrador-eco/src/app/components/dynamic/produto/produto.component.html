@@ -1,13 +1,23 @@
-<div class="container">
+<div class="container col-12">
 
   <div class="space"></div>
   <div class="row">
-    <div class="col-2"></div>
+    <div class="col-2">
+        <nav class="nav flex-column">
+            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Produto</a>
+          <a class="nav-link" [routerLink]="['/produto/produtos']" routerLinkActive="router-link-active" >Todos</a>
+          <a class="nav-link" [routerLink]="['/produto/produto']" routerLinkActive="router-link-active" >Busca por id</a>
+          <a class="nav-link" [routerLink]="['/produto/produtoCadastro']" routerLinkActive="router-link-active" >Cadastrar Produto</a>
+          <a class="nav-link" [routerLink]="['/produto/produtoAtualizar']" routerLinkActive="router-link-active" >Alterar Produto</a>
+          <a class="nav-link " [routerLink]="['/categoriaCadastro']" routerLinkActive="router-link-active"  tabindex="-1" aria-disabled="true">Categorias</a>
+        </nav>
+    </div>
     <div class="col-8">
       <div class="space"></div>
       <div class="text-center">
         <h1>Produtos</h1>
       </div>
+      <router-outlet></router-outlet>
     </div>
     <div class="col-2"></div>
   </div>
@@ -22,11 +32,13 @@
 
   </div>
 
-  <div class="row">
-    <div class="col-2"></div>
+  <div class="row col-12">
+    <div class="col-2">
+     
+    </div>
     <div class="col-8">
       <div class="container">
-        <app-products-list></app-products-list>
+        
       </div>
     </div>
     <div class="col-2"></div>
