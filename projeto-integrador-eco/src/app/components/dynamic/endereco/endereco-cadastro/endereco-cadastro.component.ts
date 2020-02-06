@@ -1,4 +1,3 @@
-
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { EnderecoService } from 'src/app/service/endereco/endereco.service';
@@ -28,8 +27,11 @@ export class EnderecoCadastroComponent implements OnInit {
 
   cadastrar() {
     //this.usuario.idUsuario = this.usuarioId;
-    //
-    this.endereco.usuario = Globals.CADASTRO;
+    
+    let usuario : Usuario = new Usuario();
+    usuario.id = Globals.CADASTRO.id;
+    console.log(usuario.id);
+    this.endereco.usuario = usuario;
     this.enderecoService.insert(this.endereco).subscribe((endereco: Endereco) => {
       this.endereco = endereco;
       alert("Endereço cadastrado com sucesso!");

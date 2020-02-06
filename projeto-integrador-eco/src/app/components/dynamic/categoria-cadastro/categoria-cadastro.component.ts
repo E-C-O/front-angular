@@ -1,13 +1,16 @@
-import { CategoriaService } from './../../../service/categoria/categoria.service';
+import { CategoriaService } from 'src/app/service/categoria/categoria.service';
 
 
 import { Component, OnInit } from '@angular/core';
 import { Categoria } from 'src/app/model/categoria';
+import { Globals } from 'src/app/model/globals';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-categoria-cadastro',
   templateUrl: './categoria-cadastro.component.html',
-  styleUrls: ['./categoria-cadastro.component.css']
+  styleUrls: ['./categoria-cadastro.component.css'],
+  providers: [Globals]
 })
 export class CategoriaCadastroComponent implements OnInit {
 
@@ -18,11 +21,21 @@ export class CategoriaCadastroComponent implements OnInit {
   nomeCategoria: string;
 
   constructor(
-    private categoriaService: CategoriaService
+    private categoriaService: CategoriaService,
+    private router: Router
   ) { }
 
   ngOnInit() {
+    if (Globals.CADASTRO == undefined) {
+      alert("Faça login para continuar");
+      this.router.navigate(['/login']);
+    }
+    else {
+      // this.router.navigate(["/produto/produtos"]);
+    }
+
     this.listarCategoria();
+
   }
 
   remover() {
@@ -43,24 +56,22 @@ export class CategoriaCadastroComponent implements OnInit {
       this.listarCategoria();
     }, err => {
       alert("Erro ao cadastrar");
-    })
+    });
   }
 
   atualizar() {
-    this.categoria.id = this.altCategoria.id;
-    this.categoria.nome = this.altCategoria.nome;
-    this.categoriaService.update(this.categoria).subscribe(() => {
+    this.categoriaService.update(this.altCategoria).subscribe(() => {
       alert("Atualizado com sucesso!");
+      this.listarCategoria();
     }, err => {
       alert("Erro ao atualizar.");
     });
-    this.listarCategoria();
   }
 
   listarCategoria() {
     this.categoriaService.getAll().subscribe((out: Categoria[]) => {
       this.categorias = out;
-    })
+    });
   }
 
   buscaNome() {

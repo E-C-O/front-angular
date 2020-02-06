@@ -34,7 +34,7 @@ const routes: Routes = [
   { path: 'perfil', component: PerfilComponent },
   { path: 'contato', component: ContatoComponent },
   { path: 'sobrenos', component: SobreNosComponent },
-  { path: 'categoriaCadastro', component: CategoriaCadastroComponent },
+  { path: 'categoria', component: CategoriaCadastroComponent },
   { path: 'produto', component: ProdutoComponent,
         children: [
           { path: 'produtos', component: ProductsListComponent },

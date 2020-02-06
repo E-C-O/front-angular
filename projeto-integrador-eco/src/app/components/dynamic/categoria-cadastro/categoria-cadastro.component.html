@@ -47,7 +47,7 @@
                     <div class="div">
                         <!-- <h5>Usuário</h5> -->
                         <input name="titulo" placeholder="Nome da categoria" type="text" class="input"
-                            (keyup)="emailIsInval()" name="nomeCategoria" [(ngModel)]="categoria.nome" required>
+                              name="nomeCategoria" [(ngModel)]="categoria.nome" required>
                     </div>
                     <div *ngIf="emailInval">
                         <h5 class="alert-danger">Requerido</h5>
@@ -73,7 +73,7 @@
                     <div class="div">
                         <!-- <h5>Usuário</h5> -->
                         <input name="titulo" placeholder="Id da categoria" type="number" class="input"
-                            (keyup)="emailIsInval()" name="delCategoria" [(ngModel)]="categoria.id" required>
+                              name="delCategoria" [(ngModel)]="categoria.id" required>
                     </div>
                 </div>
 
@@ -92,7 +92,7 @@
                     </div>
                     <div class="div">
                         <!-- <h5>Usuário</h5> -->
-                        <input placeholder="Id da categoria" type="number" class="input" (keyup)="emailIsInval()"
+                        <input placeholder="Id da categoria" type="number" class="input"  
                             name="altCategoria" [(ngModel)]="altCategoria.id" required>
                     </div>
                 </div>
@@ -102,7 +102,7 @@
                     </div>
                     <div class="div">
                         <!-- <h5>Usuário</h5> -->
-                        <input placeholder="nome da categoria" type="text" class="input" (keyup)="emailIsInval()"
+                        <input placeholder="nome da categoria" type="text" class="input"  
                             name="altCategoria" [(ngModel)]="altCategoria.nome" required>
                     </div>
                 </div>
