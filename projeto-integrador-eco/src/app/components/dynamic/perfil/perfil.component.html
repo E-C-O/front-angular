@@ -22,11 +22,13 @@
                             perfil</button>
                         <button pButton type="button" [routerLink]="['/perfil/enderecos']" icon="pi pi-times"
                             class="ui-button-secondary">Endereços</button>
+                        <button pButton type="button" [routerLink]="['/perfil/compras']" icon="pi pi-times"
+                            class="ui-button-secondary">Minhas compras</button>
                     </p-footer>
                 </p-card>
             </div>
         </div>
-        <div class="col-8">
+        <div class="col-9">
             <router-outlet></router-outlet>
         </div>
     </div>

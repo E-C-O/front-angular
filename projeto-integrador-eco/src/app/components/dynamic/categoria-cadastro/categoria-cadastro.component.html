@@ -1,27 +1,29 @@
-<div class="container col-12">
+<div class="container col-12" style="padding-bottom: 800px;">
     <!-- <div class="img">
         <img src="../../../../assets/bg.png">
     </div> -->
 
-    <div class="row col-12" style="padding-top: 130px;padding-left: 130px;padding-right: 30px; font-size: 15px; overflow: scroll">
+    <div class="row col-12"
+        style="padding-top: 130px;padding-left: 130px;padding-right: 30px; font-size: 15px; overflow: scroll">
 
 
-        <input name="nomeInput" [(ngModel)]="nomeCategoria" style="height: 20px;;" type="text" placeholder="Busca por nome" (keyup)="buscaNome()">
+        <input name="nomeInput" [(ngModel)]="nomeCategoria" style="height: 20px;;" type="text"
+            placeholder="Busca por nome" (keyup)="buscaNome()">
 
-            <table class="table table-bordered">
-                <thead>
-                    <tr>
-                        <th scope="col">Id categoria</th>
-                        <th scope="col">Nome categoria</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr *ngFor="let item of categorias">
-                        <td>{{item.id}}</td>
-                        <td>{{item.nome}}</td>
-                    </tr>
-                </tbody>
-            </table>
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th scope="col">Id categoria</th>
+                    <th scope="col">Nome categoria</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let item of categorias">
+                    <td>{{item.id}}</td>
+                    <td>{{item.nome}}</td>
+                </tr>
+            </tbody>
+        </table>
 
 
 
@@ -35,7 +37,7 @@
 
 
             <form action="index.html">
-                <h2 class="title" style="padding-bottom: 10px; font-size: 30px;">Cadastro de Categoria</h2>
+                <h2 class="title" style="padding-bottom: 10px; font-size: 20px;">Cadastro de Categoria</h2>
 
 
                 <div class="input-div">
@@ -60,10 +62,8 @@
 
 
 
-
-
             <form action="index.html">
-                <h2 class="title" style="padding-bottom: 10px; font-size: 30px;">Remover Categoria</h2>
+                <h2 class="title" style="padding-bottom: 10px; font-size: 20px;">Remover Categoria</h2>
 
 
                 <div class="input-div">
@@ -73,10 +73,7 @@
                     <div class="div">
                         <!-- <h5>Usuário</h5> -->
                         <input name="titulo" placeholder="Id da categoria" type="number" class="input"
-                            (keyup)="emailIsInval()" name="nomeCategoria" [(ngModel)]="categoria.id" required>
-                    </div>
-                    <div *ngIf="emailInval">
-                        <h5 class="alert-danger">Requerido</h5>
+                            (keyup)="emailIsInval()" name="delCategoria" [(ngModel)]="categoria.id" required>
                     </div>
                 </div>
 
@@ -84,7 +81,41 @@
                 <!-- <a href="#">Esqueceu a senha?</a> -->
                 <button (click)="remover()" class="btn" value="">Remover</button>
             </form>
+
+            <form action="index.html">
+                <h2 class="title" style="padding-bottom: 10px; font-size: 20px;">Alterar Categoria</h2>
+
+
+                <div class="input-div">
+                    <div class="i">
+                        <!-- <i class="fas fa-user"></i> -->
+                    </div>
+                    <div class="div">
+                        <!-- <h5>Usuário</h5> -->
+                        <input placeholder="Id da categoria" type="number" class="input" (keyup)="emailIsInval()"
+                            name="altCategoria" [(ngModel)]="altCategoria.id" required>
+                    </div>
+                </div>
+                <div class="input-div">
+                    <div class="i">
+                        <!-- <i class="fas fa-user"></i> -->
+                    </div>
+                    <div class="div">
+                        <!-- <h5>Usuário</h5> -->
+                        <input placeholder="nome da categoria" type="text" class="input" (keyup)="emailIsInval()"
+                            name="altCategoria" [(ngModel)]="altCategoria.nome" required>
+                    </div>
+                </div>
+
+
+                <!-- <a href="#">Esqueceu a senha?</a> -->
+                <button (click)="atualizar()" class="btn" value="">Atualizar</button>
+            </form>
+
+
+
+
         </div>
     </div>
+
 </div>
-<script type="text/javascript" src="js/main.js"></script>

@@ -37,6 +37,8 @@ import { EnderecoIdComponent } from './components/dynamic/endereco/endereco-id/e
 import { EnderecoAtualizarComponent } from './components/dynamic/endereco/endereco-atualizar/endereco-atualizar.component';
 import { EnderecoCadastroComponent } from './components/dynamic/endereco/endereco-cadastro/endereco-cadastro.component';
 import { CadastroAtualizarComponent } from './components/dynamic/cadastro-atualizar/cadastro-atualizar.component';
+import { VendaListarComponent } from './components/dynamic/venda-listar/venda-listar.component';
+
 
 
 
@@ -69,6 +71,8 @@ import { CadastroAtualizarComponent } from './components/dynamic/cadastro-atuali
     EnderecoAtualizarComponent,
     EnderecoCadastroComponent,
     CadastroAtualizarComponent,
+    VendaListarComponent,
+    
     
 
 

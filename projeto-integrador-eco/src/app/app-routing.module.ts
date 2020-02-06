@@ -23,6 +23,8 @@ import { EnderecoAtualizarComponent } from './components/dynamic/endereco/endere
 import { EnderecoCadastroComponent } from './components/dynamic/endereco/endereco-cadastro/endereco-cadastro.component';
 import { EnderecoIdComponent } from './components/dynamic/endereco/endereco-id/endereco-id.component';
 import { EnderecoListComponent } from './components/dynamic/endereco/endereco-list/endereco-list.component';
+import { VendaListarComponent } from './components/dynamic/venda-listar/venda-listar.component';
+
 
 
 
@@ -39,9 +41,9 @@ const routes: Routes = [
           { path: 'produto', component: ProductsIdComponent },
           { path: 'produtoCadastro', component: ProdutoCadastroComponent },
           { path: 'produtoAtualizar', component: ProdutoAtualizarComponent },
-          { path: 'produtoCadastro/:id', component: ProdutoCadastroComponent }
+          { path: 'produtoCadastro/:id', component: ProdutoCadastroComponent },
         ]},
-
+        
   { path: 'cadastro', component: CadastroComponent },
   { path: 'cadastro-listar', component: CadastroListarComponent },
   { path: 'login', component: LoginComponent },
@@ -52,7 +54,8 @@ const routes: Routes = [
   { path: 'enderecoId', component:EnderecoIdComponent},
   { path: 'cadastroAtualizar', component:CadastroAtualizarComponent},
   { path: 'perfil', component: PerfilComponent,
-      children: [
+  children: [
+        { path: 'compras', component: VendaListarComponent },
         { path: '', redirectTo: 'perfil', pathMatch: 'full' },
         { path: 'enderecos', component: EnderecoListComponent },
         { path: 'enderecoCadastro', component:EnderecoCadastroComponent},

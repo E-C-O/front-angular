@@ -11,10 +11,11 @@ import { Categoria } from 'src/app/model/categoria';
 })
 export class CategoriaCadastroComponent implements OnInit {
 
-  categoriaId : number;
-  categoria : Categoria =  new Categoria();
-  categorias : Categoria[];
-  nomeCategoria : string;
+  categoriaId: number;
+  altCategoria: Categoria = new Categoria();
+  categoria: Categoria = new Categoria();
+  categorias: Categoria[];
+  nomeCategoria: string;
 
   constructor(
     private categoriaService: CategoriaService
@@ -24,40 +25,51 @@ export class CategoriaCadastroComponent implements OnInit {
     this.listarCategoria();
   }
 
-  remover(){
-    this.categoriaService.delete(this.categoria.id).subscribe(()=>{
+  remover() {
+    this.categoriaService.delete(this.categoria.id).subscribe(() => {
       this.listarCategoria();
       alert("removido com sucesso");
-    },err=>{
+    }, err => {
       this.listarCategoria();
       alert("erro ao remover");
     });
     this.listarCategoria();
   }
 
-  cadastrar(){
-    
-    this.categoriaService.insert(this.categoria).subscribe((out : Categoria) =>{
+  cadastrar() {
+
+    this.categoriaService.insert(this.categoria).subscribe((out: Categoria) => {
       alert("Cadastrado com sucesso!");
       this.listarCategoria();
-    },err =>{
+    }, err => {
       alert("Erro ao cadastrar");
     })
   }
 
-  listarCategoria(){
-    this.categoriaService.getAll().subscribe((out : Categoria[])=>{
+  atualizar() {
+    this.categoria.id = this.altCategoria.id;
+    this.categoria.nome = this.altCategoria.nome;
+    this.categoriaService.update(this.categoria).subscribe(() => {
+      alert("Atualizado com sucesso!");
+    }, err => {
+      alert("Erro ao atualizar.");
+    });
+    this.listarCategoria();
+  }
+
+  listarCategoria() {
+    this.categoriaService.getAll().subscribe((out: Categoria[]) => {
       this.categorias = out;
     })
   }
 
-  buscaNome(){
-    if(this.nomeCategoria == ""){
+  buscaNome() {
+    if (this.nomeCategoria == "") {
       this.listarCategoria();
     }
-    else{
-      this.categoriaService.getByNome(this.nomeCategoria).subscribe((out : Categoria[])=>{
-        this.categorias  = out;
+    else {
+      this.categoriaService.getByNome(this.nomeCategoria).subscribe((out: Categoria[]) => {
+        this.categorias = out;
       });
     }
   }

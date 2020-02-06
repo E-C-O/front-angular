@@ -17,6 +17,7 @@ export class PerfilComponent implements OnInit {
 
   ngOnInit() {
    if (Globals.CADASTRO == undefined) {
+      alert("Faça login para continuar");
       this.router.navigate(['login']);
     } 
     else {

@@ -14,7 +14,7 @@ export class VendaService {
   }
 
   getById(id: number){
-    return this.http.get(`http://localhost:8080/venda/{id}`);
+    return this.http.get(`http://localhost:8080/venda/${id}`);
   }
 
   insert(venda: Venda){
@@ -30,6 +30,6 @@ export class VendaService {
   }
 
   delete(id: number){
-    return this.http.delete(`http://localhost:8080/venda/{id}`);
+    return this.http.delete(`http://localhost:8080/venda/${id}`);
   }
 }
